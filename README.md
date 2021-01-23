@@ -14,11 +14,8 @@ The aim of the project is to predict a patient’s severity of decline in lung f
 Predictions are evaluated with a modified version of the Laplace Log Likelihood. For each sample in test set, an `FVC` and a `Confidence` measure (standard deviation σ) has to be predicted.
 
 `Confidence` values smaller than 70 are clipped.
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\large \Delta = min ( |FVC_{true} - FVC_{predicted}|, 1000 )>
 
-\begin{equation*}
-P(E)   = {n \choose k} p^k (1-p)^{ n-k} 
-\end{equation*}
+$\large \sigma_{clipped} = max(\sigma, 70),$
 
 Errors greater than 1000 are also clipped in order to avoid large errors.
 
